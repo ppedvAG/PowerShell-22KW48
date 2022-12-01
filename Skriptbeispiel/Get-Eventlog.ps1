@@ -42,12 +42,16 @@ https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/ab
 param(
 
 [Parameter(Mandatory=$true)]
+[ValidateSet(4624,4625,4634)]
 [int]$EventId,
 
+[ValidateRange(5,10)]
 [int]$Newest = 5,
 
 [string]$ComputerName = "localhost"
 )
+
+$Newest = 2
 
 Write-Verbose -Message "Wird nur ausgegeben wenn das Skript mit dem Parameter -Verbose ausgeführt wird"
 Write-Verbose -Message "EventId: $eventid"

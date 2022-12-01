@@ -37,6 +37,8 @@ AUSFÜHRLICH: ComputerName: localhost
   Wenn der Parameter -Verbose verwendet wird werden weitere ausführliche Informationen ausgegeben
 .LINK
 https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_comment_based_help?view=powershell-5.1
+.NOTES
+ Author: StefanO@ppedv.de
 #>
 [cmdletBinding()]
 param(
@@ -48,10 +50,9 @@ param(
 [ValidateRange(5,10)]
 [int]$Newest = 5,
 
+[ValidateScript({Test-NetConnection -ComputerName $PSItem -CommonTCPPort WINRM -InformationLevel Quiet})]
 [string]$ComputerName = "localhost"
 )
-
-$Newest = 2
 
 Write-Verbose -Message "Wird nur ausgegeben wenn das Skript mit dem Parameter -Verbose ausgeführt wird"
 Write-Verbose -Message "EventId: $eventid"

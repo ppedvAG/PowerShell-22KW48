@@ -59,4 +59,6 @@ Write-Verbose -Message "EventId: $eventid"
 Write-Verbose -Message "Newest: $Newest"
 Write-Verbose -Message "ComputerName: $ComputerName"
 
+Write-Debug -Message "Debug Haltepunkt Vor Abfrage"
+
 Get-EventLog -LogName Security -ComputerName $ComputerName | Where-Object EventId -eq $EventId | Select-Object -First $Newest

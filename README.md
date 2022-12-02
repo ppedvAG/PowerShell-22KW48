@@ -10,3 +10,13 @@ Dieser Kurs besteht aus den beiden Kursen:
 ## Agenda Teil 2
 - PowerShell Neuerungen 
 - Git
+- Scripting
+- Parametrisierung
+- Parameter Validierung
+- Functions
+- SkriptModule
+- Fehlerbehandlung
+- Beginn Process End
+- PipeLine Input
+- Class / Enum
+- .Net Assemblies

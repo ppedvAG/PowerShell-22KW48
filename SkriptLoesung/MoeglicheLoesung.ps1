@@ -35,8 +35,7 @@ if(Test-Path -Path $TestFilesDir)
     }
     else
     {
-        Write-Host -Object "Ordner bereits vorhanden"
-        exit
+        throw "Ordner bereits vorhanden"
     }
 }
 
